@@ -1,0 +1,47 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "queroedu",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "logging": false,
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": true
+    },
+    "operatorsAliases": false,
+    "uri": "postgres://username:password@localhost:port/database"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "queroedu",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "logging": false,
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": true
+    },
+    "operatorsAliases": false,
+    "uri": "postgres://username:password@localhost:port/database"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "queroedu",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "logging": false,
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": true
+    },
+    "operatorsAliases": false,
+    "uri": "postgres://username:password@localhost:port/database"  
+  }
+}

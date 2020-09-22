@@ -1,5 +1,5 @@
 //call all tests
-require('./index.test')
-
+require('./errors/not-found.test')
+require('./load-data/router.test')
 require('./courses/router.test')
-require('./courses/course-model.test')
+require('./offers/router.test')

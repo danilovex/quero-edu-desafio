@@ -1,20 +1,31 @@
-var app = require('./index')
-var config = require('./config')
+const dotenv = require('dotenv');
+dotenv.config({
+    path: './config.env'
+});
+
+const db = require('./models');
+const app = require('./config/index')
 
 // logging system
-var bole = require('bole')
+const bole = require('bole')
 
 bole.output({level: 'debug', stream: process.stdout})
-var log = bole('server')
+const log = bole('server')
+
+db.sequelize.sync();
+// // drop the table if it already exists
+// db.sequelize.sync({ force: true }).then(() => {
+//Drop and re-sync db.
+// });
 
 log.info('server process starting')
-
+log.info(process.env.PORT);
 // start listening
-app.listen(config.express.port, config.express.ip, function (error) {
+app.listen(process.env.PORT, process.env.IP, function (error) {
   if (error) {
     log.error('Unable to listen for connections', error)
     process.exit(10)
   }
   log.info('express is listening on http://' +
-    config.express.ip + ':' + config.express.port)
+  process.env.IP + ':' + process.env.PORT)
 })
