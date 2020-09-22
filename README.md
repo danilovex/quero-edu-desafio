@@ -11,14 +11,14 @@ Os principais requisitos que a aplicação atendeu foram:
 *	Testes end-to-end
 *	Restrições de segurança
 
-##Demo
+## Demo
 
-Aplicação foi publicado no servidor Heroku, segue os principais end-points:
+Aplicação foi publicada no servidor Heroku, segue os principais end-points:
 
-* https://quero-edu-desafio.herokuapp.com/api/courses
-* https://quero-edu-desafio.herokuapp.com/api/offers
+* https://quero-edu-desafio.herokuapp.com/api/courses (GET)
+* https://quero-edu-desafio.herokuapp.com/api/offers (GET)
 
-##Install
+## Install
 
 Após realizar o download da aplicação rode o comando abaixo:
 
@@ -32,15 +32,15 @@ IP=127.0.0.1
 DATABASE_URL=postgres://username:password@localhost:port/database
 ```
 
-Na variável *DATABASE_URL* informe os dados de conexão com seu banco de dados
+Na variável *DATABASE_URL* informe os dados de conexão com seu banco de dados local
 
-##Run
+## Run
 
 Para iniciar a aplicação rode o comando abaixo:
 
  `npm start`
 
-##Tests
+## Run Tests
 
 Para verificar a condição dos testes, rode o comando abaixo:
 
@@ -94,7 +94,7 @@ Resultado Esperado:
 ### API: Busca de Ofertas
 Type: GET
 
-http://localhost:3000/api/courses
+http://localhost:3000/api/offers
 
 Parâmetros de Pesquisa:
 * kind, exemplo: *http://localhost:3000/api/offers?kind=Presencial*
@@ -109,7 +109,7 @@ Parâmetro de Ordenação por Preço com Desconto:
   Exemplo: *http://localhost:3000/api/offers?order_price_with_discount=DESC*
 
 Pode-se adicionar vários parâmetros numa mesmo requisição, exemplo:
-*http://localhost:3000/api/courses?kind=Presencial&university=UNIP*
+*http://localhost:3000/api/offers?kind=Presencial&university=UNIP*
 
 Resultado Esperado:
 ```json
