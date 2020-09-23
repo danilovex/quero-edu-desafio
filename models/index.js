@@ -9,13 +9,13 @@ const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
 var match = (process.env.DATABASE_URL || config.uri).match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/)
-console.log(match)
+
 const sequelize = new Sequelize(match[5], match[1], match[2], {
     dialect:  'postgres',
     protocol: 'postgres',
     port:     match[4],
     host:     match[3],
-    logging: true,
+    logging: false,
     operatorsAliases: false
 });
 

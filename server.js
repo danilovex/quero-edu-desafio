@@ -19,13 +19,14 @@ db.sequelize.sync();
 // });
 
 log.info('server process starting')
-log.info(process.env.PORT);
+const PORT = process.env.PORT || 3000;
+log.info(PORT);
 // start listening
-app.listen(process.env.PORT, process.env.IP, function (error) {
+app.listen(PORT, process.env.IP, function (error) {
   if (error) {
     log.error('Unable to listen for connections', error)
     process.exit(10)
   }
   log.info('express is listening on http://' +
-  process.env.IP + ':' + process.env.PORT)
+  process.env.IP + ':' + PORT)
 })
