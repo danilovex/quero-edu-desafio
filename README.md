@@ -42,7 +42,9 @@ Para iniciar a aplicação rode o comando abaixo:
 
 ## Run Tests
 
-Para verificar a condição dos testes, rode o comando abaixo:
+Para verificar a condição dos testes, rode os dois comandos abaixo:
+
+`npm start`
 
 `npm test`
 
