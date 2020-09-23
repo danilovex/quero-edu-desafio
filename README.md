@@ -28,7 +28,6 @@ Crie na raiz do projeto o arquivo chamado *config.env* e preencha com as variáv
 
 ```
 PORT=3000
-IP=127.0.0.1
 DATABASE_URL=postgres://username:password@localhost:port/database
 ```
 
